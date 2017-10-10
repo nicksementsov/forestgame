@@ -5,14 +5,14 @@ public:
 	Character();
 	Character(int xp, int yp);
 	void Init(int xp, int yp);
-	int move(int new_x, int new_y);
-	int push(float x_dir, float y_dir);
-	void tick();
 
-	int x_pos;
-	int y_pos;
+	int move(int new_x, int new_y);
+
+	void tick(unsigned int delta_time);
+
 	int speed;
 
+	MovementComponent *movement;
 	~Character();
 };
 
