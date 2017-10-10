@@ -2,6 +2,7 @@
 class InputManager
 {
 public:
+	InputManager();
 	InputManager(PlayerController *_pcontroller);
 	void Init(PlayerController *_pcontroller);
 

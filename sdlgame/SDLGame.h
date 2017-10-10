@@ -6,17 +6,6 @@
 #include "InputManager.h"
 #include <algorithm>
 
-typedef struct
-{
-	float x;
-	float y;
-
-	bool operator==(Vector2D other)
-	{
-		return ((x == other.x) && (y == other.y));
-	}
-} Vector2D;
-
 static void fill_array(int* _array, int length, int value)
 {
 	std::fill(_array, _array +length, value);

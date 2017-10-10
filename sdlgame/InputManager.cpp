@@ -2,6 +2,11 @@
 #include <math.h>
 #include "SDLGame.h"
 
+InputManager::InputManager()
+{
+
+}
+
 InputManager::InputManager(PlayerController *_pcontroller)
 {
 	Init(_pcontroller);
