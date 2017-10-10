@@ -124,6 +124,7 @@ void InputManager::handle_keyboard_input(SDL_Event new_event)
 			pcontroller->update_axis(1, axis_values[1]);
 		}
 	}
+	// If we got here then the key pressed isn't bound to antyhing
 }
 
 int InputManager::get_keybind(SDL_Scancode new_key)
