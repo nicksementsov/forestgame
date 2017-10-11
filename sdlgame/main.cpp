@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <vector>
 #include <math.h>
-#include <sdl.h>
+#include <SDL.h>
+
 #include "SDLGame.h"
+
+#include "MovementComponent.h"
+#include "Character.h"
+#include "PlayerController.h"
+#include "InputManager.h"
 
 bool debug = true;
 
@@ -30,8 +36,8 @@ int debug_render_frame()
 	new_rect.w = 15;
 	for (int i = 0; i < character_count; i++)
 	{
-		new_rect.x = character_list[i].x_pos - 7;
-		new_rect.y = character_list[i].y_pos - 7;
+		new_rect.x = character_list[i].movement->x() - 7;
+		new_rect.y = character_list[i].movement->y() - 7;
 		SDL_RenderDrawRect(main_renderer, &new_rect);
 	}
 	return 0;
@@ -85,6 +91,9 @@ int main_loop()
 			for (int i = 0; i < character_count; i++)
 			{
 				character_list[i].tick(current_time);
+				printf("%f, %f :: %f\n", character_list[i].movement->x(),
+					character_list[i].movement->y(),
+					character_list[i].movement->rot());
 			}
 		}
 		if (current_time > (last_frame_time + (1000 / set_fps)))

@@ -1,9 +1,6 @@
 #pragma once
 #include "SDLGame.h"
-#include "MovementComponent.h"
-#include "Character.h"
-#include "PlayerController.h"
-#include "InputManager.h"
+
 #include <algorithm>
 
 static void fill_array(int* _array, int length, int value)

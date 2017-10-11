@@ -1,3 +1,5 @@
+#include <SDL.h>
+
 #pragma once
 class InputManager
 {
@@ -18,11 +20,10 @@ public:
 	~InputManager();
 
 private:
+	int test = SDL_PRESSED;
 	PlayerController *pcontroller;
-
 	bool button_states[12];
 	float axis_values[2];
-
 	SDL_Scancode axis_keybinds[4];
 	SDL_Scancode keybinds[12];
 };

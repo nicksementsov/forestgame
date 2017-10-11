@@ -1,7 +1,9 @@
+#include "Character.h"
+
 #include <vector>
 #include <math.h>
 
-#include "SDLGame.h"
+#include "MovementComponent.h"
 
 Character::Character()
 {

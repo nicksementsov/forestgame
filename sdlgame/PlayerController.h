@@ -1,6 +1,9 @@
 // PlayerController will get status of InputManager
 // (keyboard buttons pressed, joystick axes and
 // buttons pressed etc).
+
+#include "Character.h"
+
 #pragma once
 class PlayerController
 {
@@ -22,5 +25,4 @@ private:
 	Character *owner;
 	float axes[2];
 	bool buttons[12];
-
 };

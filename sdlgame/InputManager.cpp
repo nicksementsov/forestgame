@@ -1,6 +1,10 @@
-#include <SDL.h>
+#include "InputManager.h"
+
 #include <math.h>
+#include <SDL.h>
+
 #include "SDLGame.h"
+#include "PlayerController.h"
 
 InputManager::InputManager()
 {

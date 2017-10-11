@@ -1,3 +1,6 @@
+#include "PlayerController.h"
+#include "Character.h"
+
 #include "SDLGame.h"
 
 PlayerController::PlayerController()
